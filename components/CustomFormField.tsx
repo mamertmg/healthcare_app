@@ -8,7 +8,6 @@ import PhoneInput from "react-phone-number-input";
 import { E164Number } from "libphonenumber-js/core";
 
 import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form"
-
 import { Input } from "./ui/input";
 import { Select, SelectContent, SelectTrigger, SelectValue } from "./ui/select";
 import { Textarea } from "./ui/textarea";
@@ -23,7 +22,6 @@ export enum FormFieldType {
   SELECT = "select",
   SKELETON = "skeleton",
 }
-
 interface CustomProps {
   control: Control<any>;
   name: string;
@@ -38,6 +36,7 @@ interface CustomProps {
   renderSkeleton?: (field: any) => React.ReactNode;
   fieldType: FormFieldType;
 }
+
 const RenderInput = ({ field, props }: { field: any; props: CustomProps }) => {
   switch (props.fieldType) {
     case FormFieldType.INPUT:
